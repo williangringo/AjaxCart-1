@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ikantam_AjaxCart>
+            <version>0.1.0</version>
+        </Ikantam_AjaxCart>
+    </modules>
+    <frontend>
+        <routers>
+            <iajaxcart>
+                <use>standard</use>
+                <args>
+                    <module>Ikantam_AjaxCart</module>
+                    <frontName>iajaxcart</frontName>
+                </args>
+            </iajaxcart>
+        </routers>
+        <layout>
+            <updates>
+                <iajaxcart>
+                    <file>iajaxcart.xml</file>
+                </iajaxcart>
+            </updates>
+        </layout>
+    </frontend>
+   
+    <adminhtml>
+		<layout>
+			<updates>
+				<iajaxcart>
+					<file>iajaxcart.xml</file>
+				</iajaxcart>
+			</updates>
+		</layout>
+    </adminhtml>   
+    <global>
+        <resources>
+            <iajaxcart_setup>
+                <setup>
+                    <module>Ikantam_AjaxCart</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </iajaxcart_setup>
+            <iajaxcart_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </iajaxcart_write>
+            <iajaxcart_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </iajaxcart_read>
+        </resources>
+        <models>
+            <iajaxcart>
+                <class>Ikantam_AjaxCart_Model</class>
+            </iajaxcart>
+        </models>
+        <blocks>
+            <iajaxcart>
+                <class>Ikantam_AjaxCart_Block</class>
+            </iajaxcart>
+        </blocks>
+        <helpers>
+            <iajaxcart>
+                <class>Ikantam_AjaxCart_Helper</class>
+            </iajaxcart>
+        </helpers>
+
+
+
+        <!-- Events observers -->
+        <events>
+            <controller_action_postdispatch>
+                <observers>
+                    <iajaxcart-controller-postdispatch>
+                        <type>singleton</type>
+                        <class>iajaxcart/observer</class>
+                        <method>onControllerActionPostDispatch</method>
+                    </iajaxcart-controller-postdispatch>
+                </observers>
+
+            </controller_action_postdispatch>
+
+            <controller_action_predispatch>
+                <observers>
+                    <iajaxcart-controller-postdispatch>
+                        <type>singleton</type>
+                        <class>iajaxcart/observer</class>
+                        <method>onControllerActionPreDispatch</method>
+                    </iajaxcart-controller-postdispatch>
+                </observers>
+
+            </controller_action_predispatch>
+        </events>
+
+    </global>
+
+    <!-- Acl resources -->
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <iajaxcart_setting>
+                                            <title>Ikantam AjaxCart options</title>
+                                        </iajaxcart_setting>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+
+</config>

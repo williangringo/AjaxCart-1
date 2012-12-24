@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <iajaxcart translate="label" module="iajaxcart">
+            <label>Ikantam AjaxCart</label>
+            <sort_order>99999</sort_order>
+        </iajaxcart>
+    </tabs>
+    <sections>
+        <iajaxcart_setting translate="label" module="iajaxcart">
+            <label>Settings</label>
+            <tab>iajaxcart</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <frontend translate="label">
+                    <label>Frontend configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+
+                        <preloader_img_standart translate="label comment">
+                            <label>Preloader image</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>iajaxcart/adminhtml_source_preloader</source_model>
+                            <frontend_model>iajaxcart/adminhtml_system_config_form_field_imageselect</frontend_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Select preloader image for show in frontend.</comment>
+                        </preloader_img_standart>
+
+                        <preloader_img translate="label">
+                            <label>Custom preloader image</label>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">iajaxcart</upload_dir>
+                            <base_url type="media" scope_info="1">iajaxcart</base_url>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </preloader_img>
+
+                    </fields>
+                </frontend>
+
+                <csstweaks translate="label">
+                    <label>Custom CSS tweaks</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+
+                        <addtocart_productlist translate="label comment">
+                            <label>Add to cart button in product list</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Input css selector for add to cart button in product list</comment>
+                        </addtocart_productlist>
+
+
+                        <addtocart_productview_form translate="label comment">
+                            <label>Add to cart form in product view</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Input css selector for add to cart form in product view</comment>
+                        </addtocart_productview_form>
+
+                        <addtocart_productview translate="label comment">
+                            <label>Add to cart button in product view</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Input css selector for add to cart button in product view</comment>
+                        </addtocart_productview>
+
+                        <removefromcart_button>
+                            <label>Remove from cart button</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Input css selector for remove from cart button</comment>
+                        </removefromcart_button>
+
+
+                        <addtocompare_button>
+                            <label>Add to compare link</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Input css selector for add to compare link</comment>
+                        </addtocompare_button>
+
+                        <removefromcompare_button>
+                            <label>Remove from compare button</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Input css selector for remove from compare button</comment>
+                        </removefromcompare_button>
+
+                        <clearcompare_button>
+                            <label>Clear compare button</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Input css selector for clear compare button</comment>
+                        </clearcompare_button>
+
+                        <addtowishlist_button>
+                            <label>Add to wishlist button</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Input css selector for add to wishlist button</comment>
+                        </addtowishlist_button>
+
+                        <removefromwishlist_button>
+                            <label>Remove from wishlist button</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Input css selector for remove from wishlist button</comment>
+                        </removefromwishlist_button>
+
+                    </fields>
+                </csstweaks>
+
+
+            </groups>
+        </iajaxcart_setting>
+    </sections>
+
+</config>
