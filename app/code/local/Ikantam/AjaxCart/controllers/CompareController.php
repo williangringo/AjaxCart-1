@@ -124,6 +124,7 @@ class Ikantam_AjaxCart_CompareController extends Mage_Catalog_Product_CompareCon
      */
     private function _getAjaxResponse()
     {
+        $model = Mage::getModel('catalog/product');
         return Mage::getSingleton('iajaxcart/response');
     }
 
