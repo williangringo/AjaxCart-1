@@ -10,10 +10,8 @@ class Ikantam_AjaxCart_Model_Frontend_Selector
 	private $_selectors;
 	
 	public function __construct()
-	{
-		
-		$this->_initSelectors();
-		
+	{	
+		$this->_initSelectors();	
 	}
 	
 	private function _initSelectors()
@@ -32,7 +30,7 @@ class Ikantam_AjaxCart_Model_Frontend_Selector
 		// header links 
 		$this->_selectors['toplinks'] = '.links';
 
-        	$this->_selectors['cart'] = '.cart';
+		$this->_selectors['cart'] = '.cart';
 		
 	}
 	
